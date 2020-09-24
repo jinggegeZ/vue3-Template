@@ -34,44 +34,6 @@ const routes: Array<RouteRecordRaw> = [
           path:"picturePreview"
         }
       },
-      {
-        path: '/trend',
-        name: 'trend',
-        component: () => import("../views/trend/trend.vue"),
-        meta:{
-          title:"趋势",
-          path:"trend"
-        }
-      },
-      {
-        path: '/bottomToolbars',
-        name: 'bottomToolbars',
-        component: () => import("../views/bottomToolbars/bottomToolbars.vue"),
-        meta:{
-          title:"底部工具栏",
-          path:"bottomToolbars"
-        }
-      },
-      {
-        path: '/notificationIcon',
-        name: 'notificationIcon',
-        component: () => import("../views/notificationIcon/notificationIcon.vue"),
-        meta:{
-          title:"通知图标",
-          path:"notificationIcon"
-        }
-      },
-      {
-        path: '/Embedded',
-        name: 'Embedded',
-        component: () => import("../views/Embedded/Embedded.vue"),
-        meta:{
-          title:"内嵌网页",
-          path:"Embedded"
-        }
-      },
-      
-      
     ]
   },
 

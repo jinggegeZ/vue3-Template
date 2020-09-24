@@ -61,15 +61,6 @@ const routes: Array<RouteRecordRaw> = [
           path:"notificationIcon"
         }
       },
-      {
-        path: '/Embedded',
-        name: 'Embedded',
-        component: () => import("../views/Embedded/Embedded.vue"),
-        meta:{
-          title:"内嵌网页",
-          path:"Embedded"
-        }
-      },
       
       
     ]

@@ -52,25 +52,6 @@ const routes: Array<RouteRecordRaw> = [
           path:"bottomToolbars"
         }
       },
-      {
-        path: '/notificationIcon',
-        name: 'notificationIcon',
-        component: () => import("../views/notificationIcon/notificationIcon.vue"),
-        meta:{
-          title:"通知图标",
-          path:"notificationIcon"
-        }
-      },
-      {
-        path: '/Embedded',
-        name: 'Embedded',
-        component: () => import("../views/Embedded/Embedded.vue"),
-        meta:{
-          title:"内嵌网页",
-          path:"Embedded"
-        }
-      },
-      
       
     ]
   },

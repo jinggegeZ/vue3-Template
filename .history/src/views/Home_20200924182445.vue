@@ -14,15 +14,23 @@ export default defineComponent({
   props: {},
   components: {},
   setup() {
-   
+    const router = useRouter()
     const data: Data = reactive<Data>({
-      name:'jack'
-     
+      selectedKeys: ['1'],
+      list:[
+        {
+          name:'常用hook',
+          path:'hookart'
+        }
+      ]
     });
-   
+    const choseitem = (item: any) => {
+      console.log(item);
+      router.push(item.path)
+    };
     return {
       ...toRefs(data),
-     
+      choseitem,
       
     };
   }
@@ -30,5 +38,9 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
 </style>
