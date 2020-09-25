@@ -130,16 +130,9 @@ export default defineComponent({
          {
           name: "生成水印",
           path: "generateWatermark",
-          index: 10,
-          icon:"BorderTopOutlined",
+          index: 9,
+          icon:"CopyrightCircleOutlined",
         },
-         {
-          name: "可编辑文本",
-          path: "editableText",
-          index: 11,
-          icon:"EditOutlined",
-        },
-        
       ]
     });
     const choseitem = (item: any) => {

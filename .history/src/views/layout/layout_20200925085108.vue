@@ -134,10 +134,10 @@ export default defineComponent({
           icon:"BorderTopOutlined",
         },
          {
-          name: "可编辑文本",
+          name: "生成水印",
           path: "editableText",
-          index: 11,
-          icon:"EditOutlined",
+          index: 10,
+          icon:"BorderTopOutlined",
         },
         
       ]

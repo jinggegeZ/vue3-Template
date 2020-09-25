@@ -137,7 +137,7 @@ export default defineComponent({
           name: "可编辑文本",
           path: "editableText",
           index: 11,
-          icon:"EditOutlined",
+          icon:"BorderTopOutlined",
         },
         
       ]

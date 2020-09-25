@@ -115,16 +115,7 @@ const routes: Array<RouteRecordRaw> = [
           path:"generateWatermark"
         }
       },
-      {
-        path: '/editableText',
-        name: 'editableText',
-        component: () => import("../views/editableText/editableText.vue"),
-        meta:{
-          title:"可编辑文本",
-          path:"editableText"
-        }
-      },
-      
+      editableText
       
     ]
   },

@@ -121,24 +121,6 @@ export default defineComponent({
           index: 8,
           icon:"QrcodeOutlined",
         },
-         {
-          name: "复制文本",
-          path: "copyText",
-          index: 9,
-          icon:"CopyrightCircleOutlined",
-        },
-         {
-          name: "生成水印",
-          path: "generateWatermark",
-          index: 10,
-          icon:"BorderTopOutlined",
-        },
-         {
-          name: "可编辑文本",
-          path: "editableText",
-          index: 11,
-          icon:"EditOutlined",
-        },
         
       ]
     });

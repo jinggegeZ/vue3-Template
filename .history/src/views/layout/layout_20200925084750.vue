@@ -128,18 +128,11 @@ export default defineComponent({
           icon:"CopyrightCircleOutlined",
         },
          {
-          name: "生成水印",
+          name: "复制文本",
           path: "generateWatermark",
-          index: 10,
-          icon:"BorderTopOutlined",
+          index: 9,
+          icon:"CopyrightCircleOutlined",
         },
-         {
-          name: "可编辑文本",
-          path: "editableText",
-          index: 11,
-          icon:"EditOutlined",
-        },
-        
       ]
     });
     const choseitem = (item: any) => {

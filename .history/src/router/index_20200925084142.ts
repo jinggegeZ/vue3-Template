@@ -97,33 +97,6 @@ const routes: Array<RouteRecordRaw> = [
           path:"qrCode"
         }
       },
-      {
-        path: '/copyText',
-        name: 'copyText',
-        component: () => import("../views/copyText/copyText.vue"),
-        meta:{
-          title:"复制文本",
-          path:"copyText"
-        }
-      },
-      {
-        path: '/generateWatermark',
-        name: 'generateWatermark',
-        component: () => import("../views/generateWatermark/generateWatermark.vue"),
-        meta:{
-          title:"生成水印",
-          path:"generateWatermark"
-        }
-      },
-      {
-        path: '/editableText',
-        name: 'editableText',
-        component: () => import("../views/editableText/editableText.vue"),
-        meta:{
-          title:"可编辑文本",
-          path:"editableText"
-        }
-      },
       
       
     ]

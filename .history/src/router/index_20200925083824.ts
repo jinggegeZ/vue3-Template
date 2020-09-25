@@ -71,12 +71,12 @@ const routes: Array<RouteRecordRaw> = [
         }
       },
       {
-        path: '/Captcha',
-        name: 'Captcha',
-        component: () => import("../views/Captcha/Captcha.vue"),
+        path: '/Embedded',
+        name: 'Embedded',
+        component: () => import("../views/Embedded/Embedded.vue"),
         meta:{
-          title:"验证码按钮",
-          path:"Captcha"
+          title:"内嵌网页",
+          path:"Embedded"
         }
       },
       {
@@ -86,42 +86,6 @@ const routes: Array<RouteRecordRaw> = [
         meta:{
           title:"进度条拓展",
           path:"progressBar"
-        }
-      },
-      {
-        path: '/qrCode',
-        name: 'qrCode',
-        component: () => import("../views/qrCode/qrCode.vue"),
-        meta:{
-          title:"二维码",
-          path:"qrCode"
-        }
-      },
-      {
-        path: '/copyText',
-        name: 'copyText',
-        component: () => import("../views/copyText/copyText.vue"),
-        meta:{
-          title:"复制文本",
-          path:"copyText"
-        }
-      },
-      {
-        path: '/generateWatermark',
-        name: 'generateWatermark',
-        component: () => import("../views/generateWatermark/generateWatermark.vue"),
-        meta:{
-          title:"生成水印",
-          path:"generateWatermark"
-        }
-      },
-      {
-        path: '/editableText',
-        name: 'editableText',
-        component: () => import("../views/editableText/editableText.vue"),
-        meta:{
-          title:"可编辑文本",
-          path:"editableText"
         }
       },
       
