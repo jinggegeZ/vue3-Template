@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+html body #app {
+    width: 100%;
+    height: 100%;
+}
+.continar {
+    width: 100%;
+    height: 100%;
+}
+.ant-layout {
+    width: 100%;
+    height: 100%;
+}
+.w-1 {
+    width: 100%;
+}
+.d-f {
+    display: flex;
+    
+}
+.j-c {
+    justify-content: center;
+}
+.logofontsize {
+    color: #ccc;
+    font-size: 14px;
+}
+.a-l {
+    align-items: center;
+}
+.h-30 {
+    height: 30px;
+}
+.leftbox {
+    flex: 1.5;
+    min-height: 800px;
+}
+.rightbox {
+    flex:8.5;
+    min-height: 800px;
+    padding: 15px 10px;
+    background: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.showbox {
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: auto;
+}
+.iconcolor {
+    color: white;
+}
+.ant-layout-content {
+    height: 800px;
+    overflow: auto;
+}
+.d-f {
+    display: flex;
+}
+.m-r-10 {
+    margin-right: 10px;
+}
+.contsize {
+    font-size: 16px;
+}
+.iconsize svg {
+    width: 30px !important;
+    height: 30px !important;
+}
+.boder {
+    width: 48%;
+    height: 1px;
+    background: #ccc;
+}
+.redcolor {
+    width: 0;
+	height: 0;
+	border-top: 10px solid red;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-left: 10px solid transparent;
+}
+.greencolor {
+    width: 0;
+	height: 0;
+	border-top: 50px solid red;
+	border-bottom: 50px solid yellow;
+	border-right: 50px solid green;
+	border-left: 50px solid blue;
+}
