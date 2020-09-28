@@ -2,7 +2,7 @@
   <div class="d-f">
     <div v-for="(item, index) in piclist" :key="index">
       <img
-        @click="opendialog(item, index)"
+        @click="opendialog(item,index)"
         :style="{ width: width + 'px', height: height + 'px' }"
         :src="item"
         alt=""
@@ -13,12 +13,12 @@
     <div class="dialogbox" @click="closedialog"></div>
     <div class="imgpostztion">
       <div class="d-f a-l w-1 j-c">
-        <div v-if="piclist.length > 1" class="leftimg" @click="golast">
+        <div v-if="piclist.length > 1" class="leftimg" >
           <img class="inforimgs" src="../../images/right.png" alt="" />
         </div>
-        <div v-for="(item, index) in piclist" :key="index">
+        <div v-for="(item,index) in piclist" :key="index">
           <img
-            v-if="indexs === index"
+          v-if="indexs === index"
             class="imgs"
             :style="{
               transform: 'scale(' + addscale + ') rotate(' + angle + 'deg)'
@@ -27,46 +27,46 @@
             alt=""
           />
         </div>
-        <div v-if="piclist.length > 1" class="rightimg" @click="gonext">
+        <div v-if="piclist.length > 1" class="rightimg"   @click="goright">
           <img class="inforimgs" src="../../images/left.png" alt="" />
         </div>
       </div>
 
       <div class="d-f j-c">
         <div class="inforbox">
-          <div>
-            <img
-              class="inforimg"
-              src="../../images/lager.png"
-              alt=""
-              @click="addScale"
-            />
-          </div>
-          <div>
-            <img
-              class="inforimg"
-              src="../../images/small.png"
-              alt=""
-              @click="reduceScale"
-            />
-          </div>
-          <div>
-            <img
-              class="inforimg"
-              src="../../images/shun.png"
-              alt=""
-              @click="addAngle"
-            />
-          </div>
-          <div>
-            <img
-              class="inforimg"
-              src="../../images/ni.png"
-              alt=""
-              @click="reduceAngle"
-            />
-          </div>
+        <div>
+          <img
+            class="inforimg"
+            src="../../images/lager.png"
+            alt=""
+            @click="addScale"
+          />
         </div>
+        <div>
+          <img
+            class="inforimg"
+            src="../../images/small.png"
+            alt=""
+            @click="reduceScale"
+          />
+        </div>
+        <div>
+          <img
+            class="inforimg"
+            src="../../images/shun.png"
+            alt=""
+            @click="addAngle"
+          />
+        </div>
+        <div>
+          <img
+            class="inforimg"
+            src="../../images/ni.png"
+            alt=""
+            @click="reduceAngle"
+          />
+        </div>
+      </div>
       </div>
     </div>
     <div class="xposztion" @click="closeDiolog" v-if="showclose === true">
@@ -91,7 +91,7 @@ interface Data {
   addvlaue: number;
   angle: number;
   path: string;
-  indexs: number;
+  indexs:number
 }
 export default defineComponent({
   name: "",
@@ -124,18 +124,18 @@ export default defineComponent({
       addvlaue: 0.1,
       angle: 0,
       path: "",
-      indexs: 0
+      indexs:0
     });
     const closedialog = () => {
       if (props.showclose === false) {
         data.flags = !data.flags;
       }
     };
-    const opendialog = (item: any, index: number) => {
+    const opendialog = (item: any,index:number) => {
       data.flags = !data.flags;
       console.log(item);
       data.path = item;
-      data.indexs = index;
+      data.indexs = index
     };
     const closeDiolog = () => {
       data.flags = !data.flags;
@@ -164,20 +164,15 @@ export default defineComponent({
         data.angle -= 90;
       }
     };
-    const gonext = () => {
-      if (data.indexs < props.piclist!.length-1) {
-        data.indexs += 1;
-      } else {
-        data.indexs = 0;
+    const goright = () => {
+      if(data.indexs < props.piclist!.length-1){
+        console.log(111);
+        data.indexs +=1
       }
-    };
-    const golast = () => {
-      if (data.indexs === 0) {
-        data.indexs = props.piclist!.length-1;
-      } else {
-        data.indexs -= 1;
+      else {
+        data.indexs = 0
       }
-    };
+    }
     onMounted(() => {
       data.flags = props.isMark!;
     });
@@ -196,8 +191,7 @@ export default defineComponent({
       reduceScale,
       addAngle,
       reduceAngle,
-      gonext,
-      golast
+      goright
     };
   }
 });
@@ -243,7 +237,7 @@ export default defineComponent({
   align-items: center;
   height: 50px;
   border-radius: 25px;
-
+  
   background: rgba(0, 0, 0, 0.4);
 }
 .inforimg {

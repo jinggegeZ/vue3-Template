@@ -173,7 +173,7 @@ export default defineComponent({
     };
     const golast = () => {
       if (data.indexs === 0) {
-        data.indexs = props.piclist!.length-1;
+        data.indexs = props.piclist!.length;
       } else {
         data.indexs -= 1;
       }

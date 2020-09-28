@@ -8,9 +8,7 @@
     </picturepreview>
      <div>多图片预览，点击遮罩层关闭</div>
     <picturepreview :isMark="isMark" :piclist="piclist"> </picturepreview>
-     <div>多图片预览，点击关闭按钮关闭</div>
-    <picturepreview :isMark="isMark" :piclist="piclist" :showclose="showclose">
-    </picturepreview>
+
   </div>
 </template>
 

@@ -24,9 +24,6 @@ html body #app {
 .j-c {
     justify-content: center;
 }
-.j-c-sb {
-    justify-content: space-between;
-}
 .logofontsize {
     color: #ccc;
     font-size: 14px;

@@ -1,38 +1,35 @@
 <template>
-  <div class="d-f">
-    <div v-for="(item, index) in piclist" :key="index">
+  <div v-for="(item, index) in piclist" :key="index">
+    <div class="imgbox">
       <img
-        @click="opendialog(item, index)"
+        @click="opendialog"
         :style="{ width: width + 'px', height: height + 'px' }"
         :src="item"
         alt=""
       />
     </div>
-  </div>
-  <div class="d-f j-c a-l box" v-if="flags === true">
-    <div class="dialogbox" @click="closedialog"></div>
-    <div class="imgpostztion">
-      <div class="d-f a-l w-1 j-c">
-        <div v-if="piclist.length > 1" class="leftimg" @click="golast">
-          <img class="inforimgs" src="../../images/right.png" alt="" />
+    <div class="d-f j-c a-l box" v-if="flags === true">
+      <div class="dialogbox" @click="closedialog"></div>
+      <div class="imgpostztion">
+        <div class="d-f a-l">
+          <div v-if="piclist.length > 1" class="leftimg">
+            <img class="inforimg" src="../../images/right.png" alt="" />
+          </div>
+          <div>
+            <img
+              class="imgs"
+              :style="{
+                transform: 'scale(' + addscale + ') rotate(' + angle + 'deg)'
+              }"
+              :src="item"
+              alt=""
+            />
+          </div>
+          <div v-if="piclist.length > 1" class="rightimg">
+            <img class="inforimg" src="../../images/left.png" alt="" />
+          </div>
         </div>
-        <div v-for="(item, index) in piclist" :key="index">
-          <img
-            v-if="indexs === index"
-            class="imgs"
-            :style="{
-              transform: 'scale(' + addscale + ') rotate(' + angle + 'deg)'
-            }"
-            :src="item"
-            alt=""
-          />
-        </div>
-        <div v-if="piclist.length > 1" class="rightimg" @click="gonext">
-          <img class="inforimgs" src="../../images/left.png" alt="" />
-        </div>
-      </div>
 
-      <div class="d-f j-c">
         <div class="inforbox">
           <div>
             <img
@@ -68,9 +65,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="xposztion" @click="closeDiolog" v-if="showclose === true">
-      <img class="ximg" src="../../images/close.png" alt="" />
+      <div class="xposztion" @click="closeDiolog" v-if="showclose === true">
+        <img class="ximg" src="../../images/close.png" alt="" />
+      </div>
     </div>
   </div>
 </template>
@@ -90,8 +87,6 @@ interface Data {
   addscale: number;
   addvlaue: number;
   angle: number;
-  path: string;
-  indexs: number;
 }
 export default defineComponent({
   name: "",
@@ -122,20 +117,15 @@ export default defineComponent({
       flags: false,
       addscale: 1,
       addvlaue: 0.1,
-      angle: 0,
-      path: "",
-      indexs: 0
+      angle: 0
     });
     const closedialog = () => {
       if (props.showclose === false) {
         data.flags = !data.flags;
       }
     };
-    const opendialog = (item: any, index: number) => {
+    const opendialog = () => {
       data.flags = !data.flags;
-      console.log(item);
-      data.path = item;
-      data.indexs = index;
     };
     const closeDiolog = () => {
       data.flags = !data.flags;
@@ -164,20 +154,6 @@ export default defineComponent({
         data.angle -= 90;
       }
     };
-    const gonext = () => {
-      if (data.indexs < props.piclist!.length-1) {
-        data.indexs += 1;
-      } else {
-        data.indexs = 0;
-      }
-    };
-    const golast = () => {
-      if (data.indexs === 0) {
-        data.indexs = props.piclist!.length-1;
-      } else {
-        data.indexs -= 1;
-      }
-    };
     onMounted(() => {
       data.flags = props.isMark!;
     });
@@ -195,9 +171,7 @@ export default defineComponent({
       addScale,
       reduceScale,
       addAngle,
-      reduceAngle,
-      gonext,
-      golast
+      reduceAngle
     };
   }
 });
@@ -215,9 +189,7 @@ export default defineComponent({
 }
 
 .imgpostztion {
-  width: 100%;
   z-index: 9;
-  position: relative;
 }
 .xposztion {
   position: absolute;
@@ -243,7 +215,7 @@ export default defineComponent({
   align-items: center;
   height: 50px;
   border-radius: 25px;
-
+  margin-top: 50px;
   background: rgba(0, 0, 0, 0.4);
 }
 .inforimg {
@@ -251,24 +223,11 @@ export default defineComponent({
   height: 30px;
 }
 .imgs {
-  width: 300px;
-  height: 300px;
-  margin-bottom: 50px;
+  width: 250px;
+  height: 250px;
 }
 .imgbox {
   width: 300px;
   height: 300px;
-}
-.inforimgs {
-  width: 50px;
-  height: 50px;
-}
-.leftimg {
-  position: absolute;
-  left: 10%;
-}
-.rightimg {
-  position: absolute;
-  right: 10%;
 }
 </style>

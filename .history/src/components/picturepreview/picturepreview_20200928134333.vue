@@ -165,15 +165,15 @@ export default defineComponent({
       }
     };
     const gonext = () => {
-      if (data.indexs < props.piclist!.length-1) {
+      if (data.indexs < props.piclist!.length) {
         data.indexs += 1;
       } else {
         data.indexs = 0;
       }
     };
     const golast = () => {
-      if (data.indexs === 0) {
-        data.indexs = props.piclist!.length-1;
+      if ((data.indexs = 0)) {
+        data.indexs = props.piclist!.length;
       } else {
         data.indexs -= 1;
       }

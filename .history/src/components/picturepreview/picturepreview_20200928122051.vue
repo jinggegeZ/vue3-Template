@@ -13,7 +13,7 @@
     <div class="dialogbox" @click="closedialog"></div>
     <div class="imgpostztion">
       <div class="d-f a-l w-1 j-c">
-        <div v-if="piclist.length > 1" class="leftimg" @click="golast">
+        <div v-if="piclist.length > 1" class="leftimg" @click="goleft">
           <img class="inforimgs" src="../../images/right.png" alt="" />
         </div>
         <div v-for="(item, index) in piclist" :key="index">
@@ -27,7 +27,7 @@
             alt=""
           />
         </div>
-        <div v-if="piclist.length > 1" class="rightimg" @click="gonext">
+        <div v-if="piclist.length > 1" class="rightimg" @click="goright">
           <img class="inforimgs" src="../../images/left.png" alt="" />
         </div>
       </div>
@@ -164,16 +164,16 @@ export default defineComponent({
         data.angle -= 90;
       }
     };
-    const gonext = () => {
-      if (data.indexs < props.piclist!.length-1) {
+    const goright = () => {
+      if (data.indexs < props.piclist!.length) {
         data.indexs += 1;
       } else {
         data.indexs = 0;
       }
     };
-    const golast = () => {
-      if (data.indexs === 0) {
-        data.indexs = props.piclist!.length-1;
+    const goleft = () => {
+      if ((data.indexs = 0)) {
+        data.indexs = props.piclist!.length;
       } else {
         data.indexs -= 1;
       }
@@ -196,8 +196,8 @@ export default defineComponent({
       reduceScale,
       addAngle,
       reduceAngle,
-      gonext,
-      golast
+      goright,
+      goleft
     };
   }
 });
