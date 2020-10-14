@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, SetupContext } from "vue";
-import editable from "@/components/editabletext/editabletext.vue";
+import editable from "@/components/editableText/editabletext.vue";
 interface Data {
   value: string;
 }
@@ -22,7 +22,7 @@ export default defineComponent({
     editable,
   },
   setup(props, ctx: SetupContext) {
-    const data: Data = reactive<Data>({
+    let data: Data = reactive<Data>({
       value: "何无能",
     });
     const onChange = (val: string) => {
